@@ -1,0 +1,56 @@
+[rule]
+author = ["Saeed Elfiky"]
+description = ""
+from = "now-9m"
+name = "Exporting Exchange Mailbox via PowerShell"
+note = ""
+risk_score = 47
+severity = ""
+tags = [ "example", "tag"]
+type = "eql"
+language = ""
+query = '''
+
+'''
+
+
+[[rule.threat]]
+framework = "MITRE ATT&CK"
+[[rule.threat.technique]]
+id = "T1005"
+name = "Data from Local System"
+reference = "https://attack.mitre.org/techniques/T1005/"
+
+[[rule.threat.technique]]
+id = "T1114"
+name = "Email Collection"
+reference = "https://attack.mitre.org/techniques/T1114/"
+[[rule.threat.technique.subtechnique]]
+id = "T1114.002"
+name = "Remote Email Collection"
+reference = "https://attack.mitre.org/techniques/T1114/002/"
+
+
+
+[rule.threat.tactic]
+id = "TA0009"
+name = "Collection"
+reference = "https://attack.mitre.org/tactics/TA0009/"
+[[rule.threat]]
+framework = "MITRE ATT&CK"
+[[rule.threat.technique]]
+id = "T1059"
+name = "Command and Scripting Interpreter"
+reference = "https://attack.mitre.org/techniques/T1059/"
+[[rule.threat.technique.subtechnique]]
+id = "T1059.001"
+name = "PowerShell"
+reference = "https://attack.mitre.org/techniques/T1059/001/"
+
+
+
+[rule.threat.tactic]
+id = "TA0002"
+name = "Execution"
+reference = "https://attack.mitre.org/tactics/TA0002/"
+
